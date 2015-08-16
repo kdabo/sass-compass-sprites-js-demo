@@ -22,7 +22,7 @@ CSS & Javascript effects
 
 Preview
 --------
-![Preview](http://imageshack.com/a/img537/8724/p5uvwD.png)
+![Preview](http://imagizer.imageshack.us/a/img905/1718/zgz5CD.png)
 
 Author:
 ========
