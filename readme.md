@@ -20,6 +20,10 @@ CSS & Javascript effects
 * Checkbox
 * Selectbox
 
+Preview
+--------
+![Preview](http://imageshack.com/a/img537/8724/p5uvwD.png)
+
 Author:
 ========
 * Katarina Dabo @kdabo 2015
