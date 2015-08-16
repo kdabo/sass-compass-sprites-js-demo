@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+    <link href="stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway:500,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<form action="#" method="post">
+    <fieldset class="first">
+        <legend class="personal-details">Personal Details</legend>
+        <div>
+            <label for="name" class="l1">Your name:</label>
+            <input type="text" name="name" id="name" placeholder="Your name">
+        </div>
+        <div>
+            <label for="email" class="l1" >Your email address:</label>
+            <input type="email" id="email" name="email" placeholder="E-mail">
+        </div>
+        <div>
+            <label for="phoneNumber" class="l1">Your telephone number:</label>
+            <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Phone number">
+        </div>
+        <label for="select-choice" class ="personal-details">Where are you from?</label>
+        <select name="select-choice" id="select-choice" class="choice">
+           <option value="england">England</option>
+            <option value="spain">Spain</option>
+            <option value="france">France</option>
+            <option value="netherlands">Netherlands</option>
+          </select>
+            <div class="select">
+            <span class="value">England</span>
+            <ul class="optList hidden">
+              <li class="option">England</li>
+              <li class="option">Spain</li>
+              <li class="option">France</li>
+              <li class="option">Netherlands</li>
+            </ul>
+          </div>
+    </fieldset>
+    <fieldset class="second">
+         <legend>Which is better</legend>
+
+         <label class="none" for="radio-choice-1">Mercedes</label>
+
+         <input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1">
+
+         <label class="none" class="cars"  for="radio-choice-2">Audi</label>
+
+         <input type="radio" name="radio-choice-2" id="radio-choice-2" value="choice-2">
+    </fieldset>
+    <fieldset class="third">
+        <legend class="feedback">Feedback</legend>
+        <div>
+            <label for="textarea" class="enteryourfeedback">Enter your feedback:</label>
+            <textarea cols="40" rows="8" name="textarea" id="textarea" placeholder="Enter your feedback:"></textarea>
+        </div>
+        <h4>How does our product make you feel?</h4>
+        <div>
+            <input type="checkbox" name="checkbox1" id="checkbox1" class="graphic"/>
+            <label for="checkbox1">Amazing</label>
+            <input type="checkbox" name="checkbox2" id="checkbox2" class="graphic graphic2"/>
+            <label for="checkbox2">Happy</label>
+            <input type="checkbox" name="checkbox3" id="checkbox3" class="graphic graphic3"/>
+            <label for="checkbox3">Sad</label>
+        </div>
+    </fieldset>
+    <button class="btn">Submit</button>
+</form>
+</body>
+<script src="js/script.js"></script>
+</html>

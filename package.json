@@ -1,0 +1,17 @@
+{
+  "name": "forms-usabilla",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sprity.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/kdabo",
+  "authors": [
+    "Katarina <katarina.dabo@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "css-sprite": "^0.9.9"
+  }
+}
