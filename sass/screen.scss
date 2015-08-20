@@ -1,3 +1,14 @@
+@import "compass/utilities/sprites";
+$icons-sprite: sprite-map("../images/*.png");
+
+.icons-sprite-bg {
+  background-image: $icons-sprite;
+}
+
+button {
+  display: inline-block;
+}
+
 $inlove: -4px -4px 94px 87px;
 $sad: -4px -99px 99px 96px;
 $happy: -4px -203px 101px 104px;
@@ -37,25 +48,22 @@ $background-scaled: -4px -845px 1222px 815px;
 }
 
 .btn {
-    background-image: url("sprites.png");
-    @include sprite-position($submitbtuton);
-    @include sprite-width($submitbtuton);
-    @include sprite-height($submitbtuton);
-    background-repeat: no-repeat;
+    background-image: $icons-sprite;
+    background-position: sprite-position($icons-sprite, btn1);
+    width: image-width("btn1.png");
+    height: image-height("btn1.png");
     position: absolute;
-    bottom: 220px;
-    left: 230px;
+    left: 100px;
 }
 
 .inlove {
     background-image: url("sprites.png");
     width: sprite-width($inlove);
     height: sprite-height($inlove);
-
  }
 
 form {
-    background-image: url("sprites.png");
+    background-image: url("images-s42b1e9a599.png");
     @include sprite-position($background-scaled);
     @include sprite-width($background-scaled);
     @include sprite-height($background-scaled);
@@ -252,6 +260,8 @@ textarea {
   box-sizing : border-box;
   min-width : 100%;
   max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
   letter-spacing: 3px;
 }
  
@@ -294,18 +304,19 @@ legend {
   display: inline-block;
   width: 1em;
   height: 1em;
-  vertical-align: -0.25em;
+  vertical-align: -0.1em;
   border-radius: 1em;
-  border: 0.125em solid #fff;
-  box-shadow: 0 0 0 0.15em #000;
-  margin-right: 0.75em;
+  border: 0.15em solid #fff;
+  box-shadow: 0 0 0 0.1em #000;
+  margin-right: 0.5em;
+  margin-top: 0.5em;
   transition: 0.5s ease all;
 }
 
 /* the checked style using the :checked pseudo class */
 [type="radio"]:checked + span:before {
   background: black;
-  box-shadow: 0 0 0 0.25em #000;
+  box-shadow: 0 0 0 0.08em #000;
 }
 
 
@@ -321,9 +332,8 @@ input[type="checkbox"].graphic {
     width: 1px;
     display: block;
     display: inline;
-
 }
- 
+
 input[type="checkbox"].graphic + label,
 input[type="checkbox"].graphic + label:after {
     padding: 6px 9px;

@@ -1,11 +1,11 @@
-var sprite = require('css-sprite');
+var sprite = require('sprity');
 
 sprite.create({
     src: ['images/*.png'],
     out: 'sprites',
     name: 'sprites',
     style: 'sprites/_sprites.scss',
-    cssPath: 'images',
+    cssPath: 'sprites',
     processor: 'scss'
 }, function () {
     console.log('done');

@@ -12,6 +12,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "css-sprite": "^0.9.9"
+    "sprity": "^1.0.7"
   }
 }
