@@ -53,7 +53,18 @@ $background-scaled: -4px -845px 1222px 815px;
     width: image-width("btn1.png");
     height: image-height("btn1.png");
     position: absolute;
-    left: 100px;
+    left:345px;
+    bottom: 18px;
+}
+
+.btn:hover {
+    background-image: $icons-sprite;
+    background-position: sprite-position($icons-sprite, btn2);
+    width: image-width("btn2.png");
+    height: image-height("btn2.png");
+    position: absolute;
+    left:345px;
+    bottom: 18px;
 }
 
 .inlove {
@@ -62,28 +73,21 @@ $background-scaled: -4px -845px 1222px 815px;
     height: sprite-height($inlove);
  }
 
-form {
-    background-image: url("images-s42b1e9a599.png");
-    @include sprite-position($background-scaled);
-    @include sprite-width($background-scaled);
-    @include sprite-height($background-scaled);
-    background-repeat: no-repeat;
-}
 
 $font-family: 'Raleway', sans-serif;
 
 form {
+  background-image: $icons-sprite;
+  width: 550px;
+  height: 500px; 
   position:relative;
   border: 0;
-  height: 800px;
-  width: 690px;
   margin: 0 auto;
   margin-top: 50px;
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
   padding: 10px;
   line-height: 25px;
-
 }
 
   fieldset.first { 
@@ -144,8 +148,8 @@ legend {
 }
 
 textarea {
-  width:375px;
-  height:150px;
+  width:250px;
+  height:100px;
 }
 
 .widget select,
@@ -275,7 +279,9 @@ textarea {
 }
 
 fieldset.second {
-    padding: 16px;
+    padding-left: 16px;
+    padding-bottom: 0px;
+    padding-top: 0;
     border: 0;
   }
 
@@ -401,12 +407,13 @@ input[type="checkbox"].graphic:checked + label {
 
 h4 {
   float: right;
+  font-weight: 500;
+  font-color: white;
 }
 
 fieldset.third {
     padding: 12px;
-    border: 0;
-    
+    border: 0;  
   }
 
 .feedback {
