@@ -23,6 +23,7 @@ form {
 fieldset.first {
   padding: 8px;
   border: 0;
+  margin-top: 7px;
 }
 
 /* line 40, ../sass/screen.scss */
@@ -69,9 +70,10 @@ input:focus, textarea:focus {
 /* line 84, ../sass/screen.scss */
 .personal-details {
   float: right;
+  background-color: rgba(240, 240, 240, 0.5);
 }
 
-/* line 94, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 .widget select,
 .no-widget .select {
   position: absolute;
@@ -80,20 +82,20 @@ input:focus, textarea:focus {
   overflow: hidden;
 }
 
-/* line 103, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 .select {
   position: relative;
   display: inline-block;
 }
 
-/* line 108, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
   outline: none;
 }
 
-/* line 114, ../sass/screen.scss */
+/* line 115, ../sass/screen.scss */
 .select .optList {
   font-family: 'Raleway', sans-serif;
   font-size: 11px;
@@ -103,7 +105,7 @@ input:focus, textarea:focus {
   left: 0;
 }
 
-/* line 123, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 .select .optList.hidden {
   max-height: 0;
   visibility: hidden;
@@ -119,7 +121,7 @@ input:focus, textarea:focus {
   line-height: 25px;
 }
 
-/* line 138, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 .select {
   align-items: center;
   position: relative;
@@ -140,7 +142,7 @@ input:focus, textarea:focus {
   font-weight: normal;
 }
 
-/* line 158, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 .select .value {
   display: inline-block;
   width: 100%;
@@ -157,7 +159,7 @@ input:focus, textarea:focus {
   color: black;
 }
 
-/* line 174, ../sass/screen.scss */
+/* line 175, ../sass/screen.scss */
 .select:after {
   content: "▼";
   position: absolute;
@@ -176,7 +178,7 @@ input:focus, textarea:focus {
   color: black;
 }
 
-/* line 193, ../sass/screen.scss */
+/* line 194, ../sass/screen.scss */
 .select .optList {
   z-index: 2;
   list-style: none;
@@ -196,12 +198,12 @@ input:focus, textarea:focus {
   letter-spacing: 3px;
 }
 
-/* line 211, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 .select .option {
   padding: .2em .3em;
 }
 
-/* line 215, ../sass/screen.scss */
+/* line 216, ../sass/screen.scss */
 .select .highlight {
   background: rgba(119, 114, 105, 0.1);
   color: black;
@@ -256,7 +258,13 @@ fieldset.second {
 }
 
 /** begin style for how does product make you feel */
-/* line 274, ../sass/screen.scss */
+/* line 275, ../sass/screen.scss */
+.grey {
+  width: 526px;
+  font-weight: 500;
+}
+
+/* line 280, ../sass/screen.scss */
 input[type="checkbox"].graphic {
   border: 0;
   clip: rect(0 0 0 0);
@@ -270,72 +278,73 @@ input[type="checkbox"].graphic {
   display: inline;
 }
 
-/* line 286, ../sass/screen.scss */
+/* line 292, ../sass/screen.scss */
 input[type="checkbox"].graphic + label,
 input[type="checkbox"].graphic + label:after {
-  padding: 6px 9px;
+  padding: 6px 12px;
   display: inline-block;
 }
 
-/* line 291, ../sass/screen.scss */
+/* line 298, ../sass/screen.scss */
 input[type="checkbox"].graphic + label {
   position: relative;
-  padding-left: 35px;
-  /* style */
-  background-color: rgba(255, 255, 255, 0.4);
-  color: #444;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
+  padding-left: 40px;
+  background-color: rgba(240, 240, 240, 0.5);
+  color: black;
+  border: 0;
+  border-radius: 0;
   margin: 1px;
+  margin-top: 8px;
+  height: 25px;
+  width: 70px;
+  display: block;
 }
 
-/* line 301, ../sass/screen.scss */
+/* line 312, ../sass/screen.scss */
 input[type="checkbox"].graphic + label:after {
   position: absolute;
-  /* style */
-  top: -22%;
-  left: -3px;
-  font-size: 180%;
-  font-color: blue;
+  top: 0%;
+  left: -5px;
+  font-size: 200%;
 }
 
-/* line 309, ../sass/screen.scss */
+/* line 319, ../sass/screen.scss */
 input[type="checkbox"].graphic + label:hover:after,
 input[type="checkbox"].graphic:checked + label:after {
   content: '❤';
 }
 
-/* line 314, ../sass/screen.scss */
+/* line 324, ../sass/screen.scss */
 input[type="checkbox"].graphic2 + label:hover:after,
 input[type="checkbox"].graphic2:checked + label:after {
   content: '☺';
 }
 
-/* line 319, ../sass/screen.scss */
+/* line 329, ../sass/screen.scss */
 input[type="checkbox"].graphic3 + label:hover:after,
 input[type="checkbox"].graphic3:checked + label:after {
   content: '☹';
 }
 
-/* line 324, ../sass/screen.scss */
+/* line 334, ../sass/screen.scss */
 input[type="checkbox"].graphic + label:hover:after {
   text-shadow: 0 0 7px rgba(255, 255, 255, 0.1);
   color: transparent;
 }
 
-/* line 328, ../sass/screen.scss */
+/* line 339, ../sass/screen.scss */
 input[type="checkbox"].graphic:checked + label:hover:after {
   text-shadow: none;
   color: inherit;
 }
 
-/* line 332, ../sass/screen.scss */
+/* line 344, ../sass/screen.scss */
 input[type="checkbox"].graphic + label:hover,
 input[type="checkbox"].graphic:checked + label:hover {
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0);
 }
 
-/* line 337, ../sass/screen.scss */
+/* line 349, ../sass/screen.scss */
 input[type="checkbox"].graphic + label:active,
 input[type="checkbox"].graphic:checked + label:active {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 0 7px 1px rgba(0, 0, 0, 0.5), inset 0px 0 3px 0 rgba(0, 0, 0, 0.4);
@@ -343,47 +352,48 @@ input[type="checkbox"].graphic:checked + label:active {
   margin: 2px;
 }
 
-/* line 343, ../sass/screen.scss */
+/* line 356, ../sass/screen.scss */
 input[type="checkbox"].graphic:checked + label {
   color: black;
-  border: 1px solid #888;
 }
 
-/* line 350, ../sass/screen.scss */
+/* line 362, ../sass/screen.scss */
 fieldset.third {
   padding: 12px;
   border: 0;
 }
 
-/* line 355, ../sass/screen.scss */
+/* line 367, ../sass/screen.scss */
 textarea {
   width: 250px;
   height: 100px;
 }
 
-/* line 360, ../sass/screen.scss */
+/* line 372, ../sass/screen.scss */
 h4 {
   float: right;
   font-weight: 500;
-  font-color: white;
+  background-color: rgba(240, 240, 240, 0.5);
+  margin-top: 8px;
+  color: black;
 }
 
-/* line 365, ../sass/screen.scss */
+/* line 380, ../sass/screen.scss */
 .enteryourfeedback {
   display: none;
 }
 
-/* line 370, ../sass/screen.scss */
+/* line 385, ../sass/screen.scss */
 .feedback {
   float: right;
 }
 
-/* line 376, ../sass/screen.scss */
+/* line 391, ../sass/screen.scss */
 button {
   display: inline-block;
 }
 
-/* line 380, ../sass/screen.scss */
+/* line 395, ../sass/screen.scss */
 .btn {
   background-image: url('../images/../images-s42b1e9a599.png');
   background-position: 0 -533px;
@@ -391,10 +401,12 @@ button {
   height: 64px;
   position: absolute;
   left: 345px;
-  bottom: 18px;
+  bottom: 19px;
+  border: 2px solid #c3b32c;
+  background-position: -1px -533px;
 }
 
-/* line 390, ../sass/screen.scss */
+/* line 407, ../sass/screen.scss */
 .btn:hover {
   background-image: url('../images/../images-s42b1e9a599.png');
   background-position: 0 -597px;
@@ -402,13 +414,17 @@ button {
   height: 65px;
   position: absolute;
   left: 345px;
-  bottom: 18px;
+  bottom: 19px;
+  border: 2px solid #968816;
+  background-position: 0 -600px;
 }
 
 /** end feedback*/
-/* line 404, ../sass/screen.scss */
+/* line 424, ../sass/screen.scss */
 legend {
   float: right;
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
+  background-color: rgba(240, 240, 240, 0.5);
+  color: black;
 }

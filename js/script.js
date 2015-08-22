@@ -1,5 +1,5 @@
 r(function(){
-    console.log('DOM Ready!');
+    console.log('DOM Ready!'); //TODO: write a comment explaining what each line means
 
     var e1 = document.getElementsByClassName('none')[0];
     var p1 = e1.parentNode;
@@ -18,11 +18,11 @@ r(function(){
 
     document.getElementsByTagName('label')[3].innerHTML = 'WHERE ARE YOU FROM?'
 
-    document.getElementsByTagName('legend')[1].innerHTML = 'WHICH IS BETTER ?'
+    document.getElementsByTagName('legend')[1].innerHTML = 'WHICH IS BETTER?'
 
     document.getElementsByTagName('legend')[2].innerHTML = 'FEEDBACK'
 
-    document.getElementsByTagName('h4')[0].innerHTML = 'HOW DOES OUR PRODUCT MAKE YOU FEEL ?'
+    document.getElementsByTagName('h4')[0].innerHTML = 'HOW DOES OUR PRODUCT MAKE YOU FEEL?'
 
 });
 function r(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}

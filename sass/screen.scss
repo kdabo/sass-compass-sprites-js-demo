@@ -33,7 +33,7 @@ form {
   fieldset.first { 
     padding: 8px;
     border: 0;
-   
+    margin-top: 7px;
   }
 
 //hide all labels
@@ -83,6 +83,7 @@ input:focus, textarea:focus {
 
 .personal-details {
   float: right;
+  background-color: rgba(240, 240, 240, 0.5)
 }
 
 //end style for personal details
@@ -220,7 +221,6 @@ input:focus, textarea:focus {
 
 
 
-
 //begin style for "WHICH IS BETTER ?" section
 fieldset.second {
     padding-left: 16px;
@@ -271,6 +271,12 @@ fieldset.second {
 
 /** begin style for how does product make you feel */
 
+
+.grey {
+   width: 526px;
+   font-weight: 500;
+}
+
 input[type="checkbox"].graphic {
     border: 0; 
     clip: rect(0 0 0 0); 
@@ -285,26 +291,30 @@ input[type="checkbox"].graphic {
 
 input[type="checkbox"].graphic + label,
 input[type="checkbox"].graphic + label:after {
-    padding: 6px 9px;
+    padding: 6px 12px;
     display: inline-block;
 }
+
 input[type="checkbox"].graphic + label {
     position: relative;
-    padding-left: 35px; 
-    /* style */
-    background-color: rgba(255,255,255,0.4);
-    color: #444;
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 4px;
+    padding-left: 40px;
+    background-color: rgba(240, 240, 240, 0.5);
+    color: black;
+    border: 0;
+    border-radius: 0;
     margin: 1px;
+    margin-top: 8px;
+    height: 25px;
+    width: 70px;
+    display: block;
 }
+
 input[type="checkbox"].graphic + label:after {
     position: absolute;
-    /* style */
-    top: -22%;
-    left: -3px;
-    font-size: 180%;
-    font-color:blue;
+    top: 0%;
+    left: -5px;
+    font-size: 200%;
+
 }
 input[type="checkbox"].graphic + label:hover:after,
 input[type="checkbox"].graphic:checked + label:after {
@@ -325,13 +335,15 @@ input[type="checkbox"].graphic + label:hover:after {
   text-shadow: 0 0 7px rgba(255,255,255,0.1);
   color: rgba(0,0,0,0);
 }
+
 input[type="checkbox"].graphic:checked + label:hover:after {
   text-shadow: none;
   color: inherit;
 }
+
 input[type="checkbox"].graphic + label:hover,
 input[type="checkbox"].graphic:checked + label:hover {
-    border: 1px solid rgba(255,255,255,0.7);
+    border: 1px solid rgba(255,255,255, 0);
 }
 
 input[type="checkbox"].graphic + label:active,
@@ -340,9 +352,9 @@ input[type="checkbox"].graphic:checked + label:active {
   border: none;
   margin: 2px;
 }
+
 input[type="checkbox"].graphic:checked + label {
-    color: rgba(0,0,0,1);
-    border: 1px solid #888;
+    color: rgba(0,0,0,2);
 }
 
 //begin feedback
@@ -358,10 +370,13 @@ textarea {
 }
 
 h4 {
-  float: right;
-  font-weight: 500;
-  font-color: white;
+   float: right;
+   font-weight: 500;
+   background-color: rgba(240, 240, 240, 0.5);;
+   margin-top: 8px;
+   color: black;
 }
+
 .enteryourfeedback {
   display: none;
 }
@@ -384,7 +399,9 @@ button {
     height: image-height("btn1.png");
     position: absolute;
     left:345px;
-    bottom: 18px;
+    bottom: 19px;
+    border: 2px solid #c3b32c;
+    background-position: -1px -533px;
 }
 
 .btn:hover {
@@ -394,8 +411,11 @@ button {
     height: image-height("btn2.png");
     position: absolute;
     left:345px;
-    bottom: 18px;
+    bottom: 19px;
+    border: 2px solid #968816;
+    background-position: 0 -600px;
 }
+
 //end style submit button
 
 /** end feedback*/
@@ -405,6 +425,8 @@ legend {
   float: right;
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
+  background-color: rgba(240, 240, 240, 0.5);
+  color: black;
 }
 
 
