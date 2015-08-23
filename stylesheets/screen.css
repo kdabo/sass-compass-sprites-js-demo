@@ -428,3 +428,95 @@ legend {
   background-color: rgba(240, 240, 240, 0.5);
   color: black;
 }
+
+@media only screen and (max-width: 580px) {
+  /* line 434, ../sass/screen.scss */
+  body {
+    width: 580px;
+  }
+
+  /* line 438, ../sass/screen.scss */
+  form {
+    background-image: url('../images/../images-s42b1e9a599.png');
+    background-size: 125% 125%;
+    width: 278px;
+    height: 750px;
+    position: relative;
+    border: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    padding: 10px;
+    line-height: 25px;
+  }
+
+  /* line 452, ../sass/screen.scss */
+  .personal-details, .feedback, h4, legend {
+    float: left;
+    display: block;
+    padding: 3px;
+  }
+
+  /* line 458, ../sass/screen.scss */
+  .first input {
+    display: block;
+    margin: 0px;
+  }
+
+  /* line 463, ../sass/screen.scss */
+  fieldset.first {
+    height: 174px;
+    display: flex;
+    padding: 11px;
+  }
+
+  /* line 469, ../sass/screen.scss */
+  .select {
+    margin: 0;
+  }
+
+  /* line 473, ../sass/screen.scss */
+  fieldset.second {
+    display: inline;
+    padding-left: 11px;
+    padding-bottom: 1px;
+  }
+
+  /* line 479, ../sass/screen.scss */
+  fieldset.third {
+    display: flex;
+  }
+
+  /* line 483, ../sass/screen.scss */
+  input[type="checkbox"].graphic + label {
+    display: block;
+  }
+
+  /* line 487, ../sass/screen.scss */
+  .btn {
+    width: 192px;
+    height: 65px;
+    left: 53px;
+    bottom: 11px;
+  }
+
+  /* line 494, ../sass/screen.scss */
+  .btn:hover {
+    width: 192px;
+    height: 65px;
+    left: 53px;
+    bottom: 11px;
+  }
+
+  /* line 501, ../sass/screen.scss */
+  h4 {
+    position: absolute;
+    width: 250px;
+  }
+
+  /* line 506, ../sass/screen.scss */
+  .grey {
+    position: absolute;
+    bottom: 99px;
+  }
+}

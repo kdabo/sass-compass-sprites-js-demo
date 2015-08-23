@@ -429,9 +429,82 @@ legend {
   color: black;
 }
 
+@media only screen and (max-width: 580px) {
+    
+    body {
+    width: 580px;
+    }
 
+    form {
+    background-image: $icons-sprite;
+    background-size:125% 125%;
+    width: 278px;
+    height: 750px; 
+    position:relative;
+    border: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    padding: 10px;
+    line-height: 25px;
+    }
 
+    .personal-details, .feedback, h4, legend {
+    float: left; 
+    display: block;
+    padding:3px;
+    }
 
+    .first input {
+      display: block;
+      margin: 0px;
+    }
 
+    fieldset.first {
+      height: 174px;
+      display: flex;
+      padding: 11px;
+    }
 
+    .select {
+      margin: 0;
+    }
 
+    fieldset.second {
+      display: inline;
+      padding-left: 11px;
+      padding-bottom: 1px;
+    }
+
+    fieldset.third {
+    display: flex;
+    }
+
+    input[type="checkbox"].graphic + label {
+      display: block; 
+    }
+
+    .btn {
+    width: 192px;
+    height: 65px;
+    left: 53px;
+    bottom: 11px;
+    }
+
+    .btn:hover {
+    width: 192px;
+    height: 65px;
+    left: 53px;
+    bottom: 11px;
+    }
+
+    h4 {
+      position: absolute;
+      width: 250px;
+    }
+
+    .grey {
+    position: absolute;
+    bottom: 99px;
+    }
+}
