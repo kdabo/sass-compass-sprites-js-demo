@@ -58,7 +58,6 @@ form {
 //end style for input placeholder text
 
 
-
 //style input area
 .first input {
   width:250px;
@@ -429,6 +428,48 @@ legend {
   color: black;
 }
 
+// style for alert-box
+.hidden {
+  display:none;
+}
+
+.alert-box error hidden{
+    color:#D34F4F;
+    border-radius: 0;
+    font-family:'Raleway', sans-serif;
+    padding:10px 10px 10px 36px;
+    margin: 0 auto;
+    width: 300px;
+    margin-top: 50px;
+}
+
+.alert-box span {
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.error {
+    border:1px solid #D34F4F;
+    color:#D34F4F;
+    border-radius: 0;
+    font-family:'Raleway', sans-serif;
+    padding:10px 10px 10px 36px;
+    margin: 0 auto;
+    width: 300px;
+    margin-top: 50px;
+}
+
+.success {
+    border:1px solid #75AD47;
+    color:#75AD47;
+    border-radius: 0;
+    font-family:'Raleway', sans-serif;
+    padding:10px 10px 10px 36px;
+    margin: 0 auto;
+    width: 300px;
+    margin-top: 50px;
+}
+
 @media only screen and (max-width: 580px) {
     
     body {
@@ -504,7 +545,8 @@ legend {
     }
 
     .grey {
-    position: absolute;
-    bottom: 99px;
+      position: absolute;
+      bottom: 99px;
     }
-}
+
+  }

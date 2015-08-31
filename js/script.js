@@ -1,4 +1,5 @@
 r(function(){
+    console.log("r(function() --> ")
     console.log('DOM Ready!'); //TODO: write a comment explaining what each line means
 
     var e1 = document.getElementsByClassName('none')[0];
@@ -11,7 +12,10 @@ r(function(){
     +'<label for="radio-choice-2"/>'
     +'<input type="radio" value="choice-2"  name="radio-choice-2" id="radio-choice-2" checked><span>Audi</span>'
 
+
+//    document.getElementsByClassName('btn')[0].innerHTML =''
     var b1 = document.getElementsByClassName('btn')[0];
+
     b1.innerHTML =''
 
     document.getElementsByTagName('legend')[0].innerHTML = 'PERSONAL DETAILS'
@@ -23,7 +27,7 @@ r(function(){
     document.getElementsByTagName('legend')[2].innerHTML = 'FEEDBACK'
 
     document.getElementsByTagName('h4')[0].innerHTML = 'HOW DOES OUR PRODUCT MAKE YOU FEEL?'
-
+    console.log("r(function() <-- ")
 });
 function r(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
 
@@ -35,6 +39,36 @@ function r(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
 NodeList.prototype.forEach = function (callback) {
   Array.prototype.forEach.call(this, callback);
 }
+
+//NodeList objects are collections of nodes returned by querySelector method(PROPERTIES
+// length-the no of nodes in the node list. , the NodeList is a live collection, 
+//which means that changes in the DOM are reflected in the collection
+//the NodeList is a static collection, meaning any subsequent change in the DOM does not affect the content of the collection. 
+//document.querySelectorAll returns a static NodeList.
+//The forEach() method executes a provided function once per array element 
+//--> Function to execute for each element, taking function as an argument
+
+//NodeList are used very much like arrays and it's tempting to invoke Array.prototype methods on them, 
+//however NodeList objects don't have any of the familiar Array methods.
+//avaScript has an inheritance mechanism based on prototypes for both built–in objects (like Arrays) 
+//and host objects (like NodeLists). Array instances inherit array methods (such as forEach or map) because their prototype chain looks like the following:
+
+//myArray --> Array.prototype --> Object.prototype --> null (The prototype chain of an object can be obtained by calling Object.getPrototypeOf several times.)
+
+//forEach, map and the likes are own properties of the Array.prototype object.
+
+//Unlike arrays, NodeList prototype chain looks like the following:
+
+//myNodeList --> NodeList.prototype --> Object.prototype --> null
+
+//NodeList.prototype contains the item method, but none of the Array.prototype methods, so they cannot be used on NodeLists.
+
+//Workarounds
+
+//one idea would be to add Array.prototype methods to NodeList.prototype.
+
+//var div_list = document.querySelectorAll('div'); // returns NodeList
+//var div_array = Array.prototype.slice.call(div_list); // converts NodeList to Array
 
 // -------------------- //
 // Function definitions //
@@ -49,7 +83,7 @@ function deactivateSelect(select) {
   select.classList.remove('active');
 }
 
-function activeSelect(select, selectList) {
+function actveSelect(select, selectList) {
   if (select.classList.contains('active')) return;
 
   selectList.forEach(deactivateSelect);
@@ -92,11 +126,12 @@ function getIndex(select) {
 // Event binding //
 // ------------- //
 
-window.addEventListener("load", function () {
+window.addEventListener("load", function () { // code executed each time a new page is loaded in browser/mail. 
   var form = document.querySelector('form');
  
   form.classList.remove("no-widget");
   form.classList.add("widget");
+
 });
 
 window.addEventListener('load', function () {
