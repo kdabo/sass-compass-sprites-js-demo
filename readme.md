@@ -31,6 +31,13 @@ The Responsive Web Form developed for:
 
 ![Preview](http://imageshack.com/a/img673/9429/5ltuMQ.jpg)
 
+
+
+UML Sequence Diagram
+---------------------
+![Sequence Diagram](https://imagizer.imageshack.us/v2/775x702q90/538/efVm5n.png)
+
+
 Author:
 ========
 * Katarina Dabo @kdabo 2015
