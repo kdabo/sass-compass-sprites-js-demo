@@ -35,7 +35,7 @@ The Responsive Web Form developed for:
 
 UML Sequence Diagram
 ---------------------
-![Sequence Diagram](https://imagizer.imageshack.us/v2/775x702q90/538/efVm5n.png)
+![Sequence Diagram](http://imageshack.com/a/img909/7130/ajZOqb.png)
 
 
 Author:
