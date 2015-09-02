@@ -8,6 +8,9 @@
 
     var e1 = document.getElementById('errorbox');
     var e2 = document.getElementById('successbox');
+    var cb1 = document.getElementById('checkbox1');
+    var cb2 = document.getElementById('checkbox2');
+    var cb3 = document.getElementById('checkbox3');
 
     e2.innerHTML = "";
     e2.classList.add('hidden');
@@ -41,9 +44,29 @@
 
       validationResult = false;
 
-    };
+    } else if (form.textarea.value === "") {
 
-    if (validationResult == true) {
+      e1.innerHTML = "<span>error: </span>Please tell us what you think!";
+      e1.classList.remove('hidden');
+
+      validationResult = false;
+
+    } else if (form.textarea.value.length < 10) {
+
+      e1.innerHTML = "<span>error: </span>Please write minimum 10 words!";
+      e1.classList.remove('hidden');
+
+      validationResult = false;
+
+    //equivalent to cb1.checked !== undefined && cb1.checked !== null && cb1.checked !== "" && cb1.checked === true 
+    } else if (!cb1.checked && !cb2.checked && !cb2.checked) {
+
+      e1.innerHTML = "<span>error: </span>Please check one of the boxes!";
+      e1.classList.remove('hidden');
+
+      validationResult = false;
+
+    } if (validationResult == true) {
 
       e1.innerHTML = "";
       e1.classList.add('hidden');
