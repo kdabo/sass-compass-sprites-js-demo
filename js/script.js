@@ -26,13 +26,50 @@ r(function() {
   console.log("r(function() <-- ");
 
 
-
   // xmlhtttprequest 
   // get json with countries list
   // iterare over countries list
   // create html to display
   // change the original html to use this one
 
+  var req = new XMLHttpRequest();
+  req.open('GET', 'http://api.geonames.org/countryInfoJSON?username=demo', false);
+  req.send(null);
+  //if (req.status == 200)
+  //  console.log(req.responseText);
+
+
+  var f1 = "<option value='choose an option'>Choose an option</option>"
+
+  var selectHtml = f1;
+  var listHtml = '';
+
+
+  var js = JSON.parse(req.responseText);
+ 
+  for (var i = 0; i < js.geonames.length - 1; i++) {
+    
+    var country = js.geonames[i];
+    // console.log(country.countryName);
+
+    var fn = "<option value='" + country.countryName + "'>" + country.countryName + "</option>"
+    selectHtml = selectHtml + fn;
+
+  }
+
+  document.getElementById('select-choice').innerHTML = selectHtml;
+
+
+  for (var j = 0; j < js.geonames.length - 1; j++) {
+    
+    var c = js.geonames[j];
+
+    var fn1 = "<li class='" + c.countryName + "'>" + c.countryName + "</li>"
+    listHtml = listHtml + fn1;
+
+  }
+
+  document.getElementById('optListid').innerHTML = listHtml;
 
 });
 
@@ -52,6 +89,7 @@ NodeList.prototype.forEach = function(callback) {
 // -------------------- //
 // Function definitions //
 // -------------------- //
+
 
 function deactivateSelect(select) {
   if (!select.classList.contains('active')) return;
