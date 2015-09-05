@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 )
 
 func addDefaultHeaders(fn http.HandlerFunc) http.HandlerFunc {
@@ -12,8 +13,13 @@ func addDefaultHeaders(fn http.HandlerFunc) http.HandlerFunc {
 	}
 }
 
+var Port = os.Getenv("PORT")
+
 func main() {
+	if Port == "" {
+		Port = "3000"
+	}
 	http.Handle("/", http.FileServer(http.Dir("./")))
 	fmt.Println("server online port 3000")
-	http.ListenAndServe(":3000", nil)
+	http.ListenAndServe(":"+Port, nil)
 }
