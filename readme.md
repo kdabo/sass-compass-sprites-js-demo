@@ -3,6 +3,8 @@ Spriting with Sass and Compass
 
 ![Sass](https://rawgit.com/sass/node-sass/master/media/logo.svg) 
 ![Compass](http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/02/1423617056compass.png)
+![Golang](http://sass-compass-sprites-js-demo.herokuapp.com/images/gopher.jpg)
+
 
 This repo is demo for the implementation of following technologies:
 -----------------------------------------------------------------------
@@ -12,6 +14,8 @@ This repo is demo for the implementation of following technologies:
 * CSS3
 * Sprite
 * Javascript
+* Golang
+* Heroku
 
 CSS & Javascript effects
 -------------------------
@@ -32,7 +36,8 @@ The Responsive Web Form developed for:
 ![Preview](http://imageshack.com/a/img673/9429/5ltuMQ.jpg)
 
 
-LIVE DEMO
+
+LIVE DEMO - HEROKU
 ==========
 [Live-Demo](http://sass-compass-sprites-js-demo.herokuapp.com/)
 
