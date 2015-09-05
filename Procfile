@@ -1,1 +1,1 @@
-web: sass-compass-sprites-js-demo
+web: server
