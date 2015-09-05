@@ -32,6 +32,10 @@ The Responsive Web Form developed for:
 ![Preview](http://imageshack.com/a/img673/9429/5ltuMQ.jpg)
 
 
+LIVE DEMO
+==========
+[Live-Demo](http://sass-compass-sprites-js-demo.herokuapp.com/)
+
 
 UML Sequence Diagram
 ---------------------
