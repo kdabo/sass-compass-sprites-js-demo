@@ -33,43 +33,89 @@ r(function() {
   // change the original html to use this one
 
   var req = new XMLHttpRequest();
-  req.open('GET', 'http://api.geonames.org/countryInfoJSON?username=demo', false);
+  req.open('GET', '/json/countryinfojson', false);
   req.send(null);
-  //if (req.status == 200)
-  //  console.log(req.responseText);
-
+  if (req.status == 200)
+    console.log(req.responseText);
 
   var f1 = "<option value='choose an option'>Choose an option</option>"
 
   var selectHtml = f1;
   var listHtml = '';
 
-
   var js = JSON.parse(req.responseText);
- 
+
   for (var i = 0; i < js.geonames.length - 1; i++) {
-    
     var country = js.geonames[i];
     // console.log(country.countryName);
-
     var fn = "<option value='" + country.countryName + "'>" + country.countryName + "</option>"
     selectHtml = selectHtml + fn;
-
   }
 
-  document.getElementById('select-choice').innerHTML = selectHtml;
-
+  var select = document.getElementById('select-choice');
+  select.innerHTML = selectHtml;
+  var selectList = document.querySelectorAll('.select');
 
   for (var j = 0; j < js.geonames.length - 1; j++) {
-    
     var c = js.geonames[j];
-
-    var fn1 = "<li class='" + c.countryName + "'>" + c.countryName + "</li>"
+    var fn1 = "<li class='option'>" + c.countryName + "</li>"
     listHtml = listHtml + fn1;
-
   }
 
-  document.getElementById('optListid').innerHTML = listHtml;
+  var selectList = document.getElementById('optListid');
+
+  selectList.innerHTML =
+
+    "<span class='value'>Choose an option</span><ul class='optList hidden'>" +
+    listHtml + "</ul>"
+
+
+  var selectList = document.querySelectorAll('.select');
+
+  select.addEventListener('click', function(event) {
+    toggleOptList(select);
+  });
+
+  var optionList = document.querySelectorAll('.option');
+
+  optionList.forEach(function(option) {
+    option.addEventListener('mouseover', function() {
+      highlightOption(option);
+    });
+    option.addEventListener('focus', function(event) {
+      activeSelect(select, option);
+    });
+
+  });
+
+  selectList.forEach(function(select) {
+    var optionList = select.querySelectorAll('.option'),
+      selectedIndex = getIndex(select);
+
+    select.tabIndex = 0;
+    select.previousElementSibling.tabIndex = -1;
+
+    updateValue(select, selectedIndex);
+
+    optionList.forEach(function(option, index) {
+      option.addEventListener('click', function(event) {
+        updateValue(select, index);
+      });
+
+    });
+    select.addEventListener('keyup', function(event) {
+      var length = optionList.length,
+        index = getIndex(select);
+
+      if (event.keyCode === 40 && index < length - 1) {
+        index++;
+      }
+      if (event.keyCode === 38 && index > 0) {
+        index--;
+      }
+      updateValue(select, index);
+    });
+  });
 
 });
 
@@ -113,8 +159,8 @@ function toggleOptList(select, show) {
   optList.classList.toggle('hidden');
 }
 
-function highlightOption(select, option) {
-  var optionList = select.querySelectorAll('.option');
+function highlightOption(option) {
+  var optionList = document.querySelectorAll('.option');
 
   optionList.forEach(function(other) {
     other.classList.remove('highlight');
@@ -151,7 +197,7 @@ window.addEventListener("load", function() { // code executed each time a new pa
 
 });
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function load0() {
   var selectList = document.querySelectorAll('.select');
 
   selectList.forEach(function(select) {
@@ -173,40 +219,6 @@ window.addEventListener('load', function() {
 
     select.addEventListener('blur', function(event) {
       deactivateSelect(select);
-    });
-  });
-});
-
-window.addEventListener('load', function() {
-  var selectList = document.querySelectorAll('.select');
-
-  selectList.forEach(function(select) {
-    var optionList = select.querySelectorAll('.option'),
-      selectedIndex = getIndex(select);
-
-    select.tabIndex = 0;
-    select.previousElementSibling.tabIndex = -1;
-
-    updateValue(select, selectedIndex);
-
-    optionList.forEach(function(option, index) {
-      option.addEventListener('click', function(event) {
-        updateValue(select, index);
-      });
-    });
-
-    select.addEventListener('keyup', function(event) {
-      var length = optionList.length,
-        index = getIndex(select);
-
-      if (event.keyCode === 40 && index < length - 1) {
-        index++;
-      }
-      if (event.keyCode === 38 && index > 0) {
-        index--;
-      }
-
-      updateValue(select, index);
     });
   });
 });
