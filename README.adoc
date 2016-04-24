@@ -1,0 +1,27 @@
+= Spriting with Sass and Compass
+Katarina Dabo <katarina@usabilla.com>
+v1.0, 2016-03-01
+
+.Preview
+
+image::http://rawgit.com/sass/node-sass/master/media/logo.svg[logo]
+image::http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/02/1423617056compass.png[compass]
+image::http://sass-compass-sprites-js-demo.herokuapp.com/images/gopher.jpg"[gopher]
+
+.This repo is demo for the implementation of following technologies:
+- [*] Compass
+- [*] Sass
+- [*] CSS3
+- [*] Sprite
+- [*] Javascript
+- [*] Golang
+- [*] Heroku
+
+.CSS & Javascript effects
+[square]
+. Radio buttons 
+. Checkboxes
+. Selectbox
+
+.Live Demo - Heroku
+http://sass-compass-sprites-js-demo.herokuapp.com[live demo]
